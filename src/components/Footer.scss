@@ -1,0 +1,20 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: $pxl 0;
+    background-color: $darkBlue;
+    color: $GRAY;
+    font-size: 18px;
+    font-weight: 700;
+
+    &-links{
+        a{  
+            margin: 7px;
+            color: $BLUE;
+        }
+    }
+}

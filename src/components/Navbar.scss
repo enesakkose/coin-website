@@ -1,0 +1,38 @@
+.navbar{
+    height: 100%;
+    background-color: $darkBlue;
+    color: $bgSecondary;
+
+    &-logo{
+        font-size: 30px;
+        font-weight: 700;
+        padding: $pxl;
+
+        a{
+            color: $BLUE;
+        }
+    }
+
+    &-menu{
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li{
+                a{
+                    display: flex;
+                    align-items: center;
+                    padding: $pm $pxl;
+                    gap: 10px;
+                    color: $GRAY;
+                }
+            }
+        }
+
+        .active{
+                background-color: $BLUE;
+        }
+    }
+}
