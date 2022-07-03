@@ -1,0 +1,43 @@
+.cryptoCurrencies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+
+    &-card{
+        background-color: $bgPrimary;    
+        transition: 300ms all ease-in-out;
+
+        &:hover{
+            transform: scale(1.03);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        a{
+            color: $textPrimary
+        }
+
+        &-text{
+            border-bottom: 1px solid $bgSecondary;
+
+                &-header{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: $pl;
+                
+                &-img{
+                    width: 30px;
+                    height: 30px;  
+                }  
+            }
+        }
+
+        &-info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: $pxl $pl;
+        }
+    }
+}
+
+// 1.02.40
