@@ -7,8 +7,11 @@ import News from './News'
 import './Home.scss'
 
 function Home() {
-  const { data, isFetching } = useGetCryptosQuery()
-  const [globalStats, setGlobalStats] = useState(data?.data?.stats)
+  const { data, isFetching } = useGetCryptosQuery(10)
+  const globalStats = data?.data?.stats  
+  
+
+  
 
 
   if(isFetching) return 'Loading...'
@@ -47,7 +50,7 @@ function Home() {
           </Link>
         </h3>
       </div>
-      <CryptoCurrencies/>
+      <CryptoCurrencies showItem={true}/>
 
       <div className="home-redirect-router">
         <h2>Latest crypto news</h2>
