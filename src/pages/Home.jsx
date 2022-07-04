@@ -60,7 +60,7 @@ function Home() {
           </Link>
         </h3>
       </div>
-      <News/>
+      <News showItem={true} />
     </div>
   )
 }
