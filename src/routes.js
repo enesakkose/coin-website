@@ -19,7 +19,7 @@ export const routes = [
         element: CryptoCurrencies
     },
     {
-        path: '/crypto/:coinId',
+        path: '/coin/:coinId',
         element: CryptoDetails
     },
     {

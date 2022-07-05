@@ -13,7 +13,7 @@ function CryptoCurrencies({showItem}) {
   useEffect(()=> {
 
 
-    const filteredCryptos = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()))
+    const filteredCryptos = coins?.filter((coin) => coin?.name.toLowerCase().includes(search.toLowerCase()))
     
     setCryptos(filteredCryptos)
   }, [search, cryptoList])
@@ -29,8 +29,9 @@ function CryptoCurrencies({showItem}) {
       )}
     <div className='cryptoCurrencies'>
       {cryptos?.map((crypto) => (
-        <div key={crypto.id} className='cryptoCurrencies-card'>
-          <Link to={`/crypto/${crypto.id}`}>
+        
+        <div key={crypto.name} className='cryptoCurrencies-card'>
+          <Link to={`/coin/${crypto.uuid}`}>
             <div className="cryptoCurrencies-card-text">
               <div className='cryptoCurrencies-card-text-header'>
                 <h3>{`${crypto.rank}. ${crypto.name}`}</h3>
